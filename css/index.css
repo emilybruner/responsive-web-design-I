@@ -67,27 +67,29 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 *{
-	margin-bottom: 15px;
+    width: 100%
+	margin-bottom: 5%;
 }
-	
+/*
 body{
 	margin-left: 80px;
 	width: 1000px;
 }
 /* Navigation Code*/
 
-#navbar{
+.navbar{
 	display:flex;
-	height: 45px;
-	align-items: flex-start;	
+	height: 3%;
+    align-items: flex-start;	
+    width: 90%;
 }
 
 #navlogo{
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-start;
-	height: 40px;
-	margin-top: -30px;
+    display: flex;
+    justify-content: flex-end;
+	height: 3%;
+    
+    
 }
 
 nav a{
@@ -101,7 +103,7 @@ nav a{
 nav{
 	display: flex;
 	justify-content: space-evenly;
-	margin-right: 150px;
+	margin-right: 10%;
 	align-items: flex-start;
 }
 
@@ -109,10 +111,11 @@ nav{
 	/* End navigation code, beginning of Innovation Header code*/
 
 #innovation-header{
-	margin-top: 50px;
-	margin-bottom: 20px;
+	margin-top: 3%;
+	margin-bottom: 3%;
 	display: flex;
-	justify-content: space-evenly;
+    justify-content: space-evenly;
+    width: 90%
 }
 
 .innovate{
@@ -121,14 +124,14 @@ nav{
 	justify-content: center;
 	width: 49%;
 	font-size: 75px;
-	margin: 80px;
+	margin: 7%;
 }
 
 #innovateimg{
 	display: flex;
 	height: 90%;
-	margin-top: 20px;
-	margin-right: 40px;
+	margin-top: 5%;
+	margin-right: 7%;
 }
 
 h1{
@@ -137,31 +140,14 @@ h1{
 }
 
 button{
-	margin-left: 143px;
-    width: 200px;
-    border-radius: 0px !important;
+	margin-left: 30%;
+    width: 40%;
+    border-radius: 0px;
     border: 1px solid black;
+    background: white;
+    padding: 2% 3%;
+    font-size: 14px;
     
-}
-
-
-h1{
-	text-align: center;
-	font-size: 80px;
-	padding: 0px 100px;
-	width: 55%
-	vertical-align: top;
-	display: inline-block;
-}
-
-button{
-	border-radius: 10px;
-	background: white;
-	vertical-align: top;
-	margin-top: 5px;
-	padding: 10px 50px;
-	font-size: 14px;
-	font-family: 'Titillium Web', sans-serif;
 }
 
 button:hover{
@@ -169,36 +155,46 @@ button:hover{
 	background-color:white;
 }
 
+h1{
+	text-align: center;
+	font-size: 80px;
+	padding: 0% 10%;
+	width: 55%
+	vertical-align: top;
+	display: inline-block;
+}
 
 
 /* End header code, begin top content */
 .top-content{
-	width: 100%;
+	width: 90%;
     display:flex;
     border-top: 2px solid black;
+    margin-left: 5%
 }
 #features, #about{
 	display: flex;
 	flex-direction: column;
 	width: 49%;
-	margin-bottom: 25px;
-	margin-top: 20px;
-	padding: 25px;
+	margin-bottom: 3%;
+	margin-top: 3%;
+	padding: 3%;
 	line-height: 20px;
 
 }
 /* End top content, begin bottom content code */
 .bottom-content{
 	display:flex;
-    width: 100%;
+    width: 90%;
     border-bottom: 2px solid black;
+    margin-left: 5%;
 
 }
 #services, #product, #vision{
 	display: flex;
 	flex-direction: column;
 	width: 27%;
-	margin: 10px 30px 20px 30px;
+	margin: 3%;
 	line-height: 20px;
 	padding: 25px 0px;
 }
@@ -206,22 +202,93 @@ button:hover{
 .middle-img{
 	display: flex;
 	justify-content: center;
-	width: 95%;
-	margin-left: 20px;
+	width: 90%;
+	margin-left: 3%;
 }
 
 /* Contact Code */
 .contact{
 	display:flex;
 	flex-direction: column;
-	margin-top: 30px;
-	margin-bottom: 75px;
-	font-size: 16px
+    margin-top: 4%;
+    margin-left: 5%;
+	margin-bottom: 11%;
+    font-size: 16px
+    width: 100%
 }
 
 /* Footer Code */
 
 footer{
 	font-size: 13px
-	margin-bottom: 200px
+	margin-bottom: 5%;
+}
+
+/* Responsive Design Update for Project */
+
+
+@media (max-width: 800px){
+    #innovateimg{
+        display:none
+    }
+    .innovate{
+        justify-content: center;
+    }
+    .navbar{
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px){
+
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%
+    }
+    #navlogo{
+        justify-content: center;
+        margin-right: 15%
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        width: 75%;
+        border-top: 1px solid gray;
+        margin: 20px;
+        
+    }
+    nav a{
+        width: 100%;
+        border-bottom: 1px solid gray;
+    }
+
+    .innovate{
+        width: 400px;
+    }
+    h1{
+        font-size: 50px;
+    }
+
+    .top-content{
+        flex-direction: column;
+        width: 75%;
+        
+    }
+
+    #features, #about{
+        width: 300px;
+    }
+    .middle-img{
+        justify-content: center;
+        width: 325px;
+    }
+    .bottom-content{
+        flex-direction: column;
+        width: 75%;
+    }
+    #services, #product, #vision{
+        width: 300px;
+    }
 }

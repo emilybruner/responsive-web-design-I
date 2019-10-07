@@ -237,6 +237,24 @@ footer{
     .navbar{
         width: 100%;
     }
+
+    .top-content{
+        width: 75%;  
+    }
+
+    #features, #about{
+        width: 600px;
+    }
+    .middle-img{
+        justify-content: center;
+        width: 625px;
+    }
+    .bottom-content{
+        width: 75%;
+    }
+    #services, #product, #vision{
+        width: 600px;
+    }
 }
 
 @media(max-width: 500px){

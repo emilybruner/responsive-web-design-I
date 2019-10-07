@@ -221,13 +221,29 @@ h1{
 
 footer{
 	font-size: 13px
-	margin-bottom: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
 }
 
 /* Responsive Design Update for Project */
 
 
 @media (max-width: 800px){
+    *{
+        max-width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%
+    }
+    #navlogo{
+        justify-content: center;
+        margin-bottom: 2%;
+    }
     #innovateimg{
         display:none
     }
@@ -258,6 +274,9 @@ footer{
 }
 
 @media(max-width: 500px){
+    *{
+        max-width: 100%;
+    }
 
     .navbar{
         flex-direction: column;
@@ -309,4 +328,5 @@ footer{
     #services, #product, #vision{
         width: 300px;
     }
+  
 }

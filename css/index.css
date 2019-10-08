@@ -1,3 +1,332 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+*{
+    width: 100%
+	margin-bottom: 5%;
+}
+/*
+body{
+	margin-left: 80px;
+	width: 1000px;
+}
+/* Navigation Code*/
+
+.navbar{
+	display:flex;
+	height: 3%;
+    align-items: flex-start;	
+    width: 90%;
+}
+
+#navlogo{
+    display: flex;
+    justify-content: flex-end;
+	height: 3%;
+    
+    
+}
+
+nav a{
+	display: flex;
+	justify-content: space-evenly;
+	color:gray;
+	text-decoration: none;
+	font-family: 'Titillium Web', sans-serif;	
+}
+
+nav{
+	display: flex;
+	justify-content: space-evenly;
+	margin-right: 10%;
+	align-items: flex-start;
+}
+
+
+	/* End navigation code, beginning of Innovation Header code*/
+
+#innovation-header{
+	margin-top: 3%;
+	margin-bottom: 3%;
+	display: flex;
+    justify-content: space-evenly;
+    width: 90%
+}
+
+.innovate{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 49%;
+	font-size: 75px;
+	margin: 7%;
+}
+
+#innovateimg{
+	display: flex;
+	height: 90%;
+	margin-top: 5%;
+	margin-right: 7%;
+}
+
+h1{
+	display: flex;
+	justify-content: center;
+}
+
+button{
+	margin-left: 30%;
+    width: 40%;
+    border-radius: 0px;
+    border: 1px solid black;
+    background: white;
+    padding: 2% 3%;
+    font-size: 14px;
+    
+}
+
+button:hover{
+	color: blue;
+	background-color:white;
+}
+
+h1{
+	text-align: center;
+	font-size: 80px;
+	padding: 0% 10%;
+	width: 55%
+	vertical-align: top;
+	display: inline-block;
+}
+
+
+/* End header code, begin top content */
+.top-content{
+	width: 90%;
+    display:flex;
+    border-top: 2px solid black;
+    margin-left: 5%
+}
+#features, #about{
+	display: flex;
+	flex-direction: column;
+	width: 49%;
+	margin-bottom: 3%;
+	margin-top: 3%;
+	padding: 3%;
+	line-height: 20px;
+
+}
+/* End top content, begin bottom content code */
+.bottom-content{
+	display:flex;
+    width: 90%;
+    border-bottom: 2px solid black;
+    margin-left: 5%;
+
+}
+#services, #product, #vision{
+	display: flex;
+	flex-direction: column;
+	width: 27%;
+	margin: 3%;
+	line-height: 20px;
+	padding: 25px 0px;
+}
+
+.middle-img{
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	margin-left: 3%;
+}
+
+/* Contact Code */
+.contact{
+	display:flex;
+	flex-direction: column;
+    margin-top: 4%;
+    margin-left: 5%;
+	margin-bottom: 11%;
+    font-size: 16px
+    width: 100%
+}
+
+/* Footer Code */
+
+footer{
+	font-size: 13px
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Design Update for Project */
+
+
+@media (max-width: 800px){
+    *{
+        max-width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%
+    }
+    #navlogo{
+        justify-content: center;
+        margin-bottom: 2%;
+    }
+    #innovateimg{
+        display:none
+    }
+    .innovate{
+        justify-content: center;
+    }
+    .navbar{
+        width: 100%;
+    }
+
+    .top-content{
+        width: 75%;  
+    }
+
+    #features, #about{
+        width: 600px;
+    }
+    .middle-img{
+        justify-content: center;
+        width: 625px;
+    }
+    .bottom-content{
+        width: 75%;
+    }
+    #services, #product, #vision{
+        width: 600px;
+    }
+}
+
+@media(max-width: 500px){
+    *{
+        max-width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%
+    }
+    #navlogo{
+        justify-content: center;
+        margin-right: 15%
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        width: 75%;
+        border-top: 1px solid gray;
+        margin: 20px;
+        
+    }
+    nav a{
+        width: 100%;
+        border-bottom: 1px solid gray;
+    }
+
+    .innovate{
+        width: 400px;
+    }
+    h1{
+        font-size: 50px;
+    }
+
+    .top-content{
+        flex-direction: column;
+        width: 75%;
+        
+    }
+
+    #features, #about{
+        width: 300px;
+    }
+    .middle-img{
+        justify-content: center;
+        width: 325px;
+    }
+    .bottom-content{
+        flex-direction: column;
+        width: 75%;
+    }
+    #services, #product, #vision{
+        width: 300px;
+    }
+  
+}
